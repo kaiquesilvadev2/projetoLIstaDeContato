@@ -1,9 +1,8 @@
+import AppLayout from "./Layout/AppLayout"
+
 function App() {
-
   return (
-    <>
-
-    </>
+    <AppLayout></AppLayout>
   )
 }
 
