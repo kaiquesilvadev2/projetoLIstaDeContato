@@ -9,28 +9,35 @@ interface Contatos {
     img: string
 }
 
-interface IListaContatosProps extends React.ComponentProps<"ul"> {
+interface IListaContatosProps extends React.ComponentProps<"div"> {
     listaContatos: Contatos[]
 }
 
 export default function ListaContatos({ listaContatos, className, children, ...props }: IListaContatosProps) {
     return (
-        <ul className={`${className}`} {...props}>
-            {listaContatos.map(itens => (
+        <div className={` ${className}`} {...props}>
+            <ul className="overflow-auto flex flex-col justify-center h-full ">
+                {listaContatos.map(itens => (
 
-                <li key={itens.id}>
-                    <img src={itens.img} alt="" />
-                    <div>
-                        <p>{itens.nome}</p>
-                        <p>{itens.email}</p>
-                    </div>
-                    <div>
-                        <ButtonContato imgIcon={deleteIcon} descricao="deletar" />
-                        <ButtonContato imgIcon={editIcon} descricao="editar" />
-                    </div>
+                    <li key={itens.id} className="flex flex-row justify-between 
+                                            max-w-[40.1rem] w-full mx-auto p-3 border-b-[1px] border-gray-300/60">
+                        <img className="rounded-full h-20 w-20 hover:scale-110 transition-transform duration-200" src={itens.img} alt="" />
+                        <div className="flex flex-col grow ml-4.5 min-w-0">
+                            <div className="flex flex-col">
+                                <p className="text-2xl truncate ">{itens.nome}</p>
+                                <p className="text-[#aaa] truncate">{itens.email}</p>
+                            </div>
+                        </div>
+                        <div className="flex gap-3 m-1.5">
+                            <ButtonContato className="opacity-50" imgIcon={deleteIcon} descricao="deletar" />
+                            <ButtonContato className="opacity-50" imgIcon={editIcon} descricao="editar" />
+                        </div>
 
-                </li>
-            ))}
-        </ul>
+                    </li>
+                ))}
+            </ul>
+
+        </div>
+
     )
 }

@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../components/NavBar";
 import { cva, type VariantProps } from "class-variance-authority";
 
 
