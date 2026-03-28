@@ -8,7 +8,7 @@ export default function NavBar({ className, ...props }: INavBarProps) {
 
 
     return (
-        <aside className={` bg-gray-800 ${className}`}>
+        <aside className={` bg-gray-800 ${className}`} {...props}>
 
             <TextLayout as="h1" className="mb-4" size="textTituloNavBar" >Menu</TextLayout>
 

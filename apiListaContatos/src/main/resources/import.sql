@@ -1,0 +1,15 @@
+INSERT INTO tb_contatos (nome, email, img) VALUES ('João Kaique', 'joao@email.com', 'https://randomuser.me/api/portraits/men/1.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Maria Silva', 'maria@email.com', 'https://randomuser.me/api/portraits/women/2.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Carlos Souza', 'carlos@email.com', 'https://randomuser.me/api/portraits/men/3.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Ana Oliveira', 'ana@email.com', 'https://randomuser.me/api/portraits/women/4.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Pedro Santos', 'pedro@email.com', 'https://randomuser.me/api/portraits/men/5.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Juliana Costa', 'juliana@email.com', 'https://randomuser.me/api/portraits/women/6.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Lucas Pereira', 'lucas@email.com', 'https://randomuser.me/api/portraits/men/7.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Fernanda Rocha', 'fernanda@email.com', 'https://randomuser.me/api/portraits/women/8.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Rafael Alves', 'rafael@email.com', 'https://randomuser.me/api/portraits/men/9.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Camila Ribeiro', 'camila@email.com', 'https://randomuser.me/api/portraits/women/10.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Bruno Martins', 'bruno@email.com', 'https://randomuser.me/api/portraits/men/11.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Patricia Gomes', 'patricia@email.com', 'https://randomuser.me/api/portraits/women/12.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Eduardo Lima', 'eduardo@email.com', 'https://randomuser.me/api/portraits/men/13.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Aline Fernandes', 'aline@email.com', 'https://randomuser.me/api/portraits/women/14.jpg');
+INSERT INTO tb_contatos (nome, email, img) VALUES ('Gustavo Carvalho', 'gustavo@email.com', 'https://randomuser.me/api/portraits/men/15.jpg');

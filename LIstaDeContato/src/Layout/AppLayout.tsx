@@ -1,25 +1,25 @@
+import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import ListaContatos from "../pages/ListaContatos";
+import { ContatoApi } from "../services/api/ContatoApi";
+import type { ContatoType } from "../services/types/ContatoType";
 
 export default function AppLayout() {
 
-    const contatosTeste = [
-        { id: 1, nome: "João Kaiqu safafwfv csfjfmvmdvf fdfldfdldf fdpfdf, df dfdofdf dfddfldmfld dfdfkdfmdlfmdfsdsds ", email: "joao@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 2, nome: "Maria Silva", email: "maria@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 2, nome: "Maria Silva", email: "maria@email.commaria@email.commaria@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 3, nome: "Carlos Souza", email: "carlos@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 1, nome: "João Kaique", email: "joao@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 2, nome: "Maria Silva", email: "maria@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 2, nome: "Maria Silva", email: "maria@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 3, nome: "Carlos Souza", email: "carlos@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 1, nome: "João Kaique", email: "joao@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 2, nome: "Maria Silva", email: "maria@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 2, nome: "Maria Silva", email: "maria@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-        { id: 3, nome: "Carlos Souza", email: "carlos@email.com", img: "https://randomuser.me/api/portraits/men/1.jpg" },
-    ];
+    const [listContatos, setListaContatos] = useState<ContatoType[]>([])
+
+    useEffect(() => {
+
+        async function buscaTodos() {
+            const resutado = await ContatoApi.bustaTodos();
+            setListaContatos(resutado)
+        };
+
+        buscaTodos();
+    }, ([]));
 
     return (
-        <div className="grid h-screen
+        <div className="grid h-dvh
                 grid-cols-4 
                 sm:grid-cols-6 
                 md:grid-cols-10">
@@ -39,9 +39,8 @@ export default function AppLayout() {
         lg:col-start-2
         h-full
         "
-                listaContatos={contatosTeste}
+                listaContatos={[...listContatos]}
             />
-
         </div>
     )
 }
